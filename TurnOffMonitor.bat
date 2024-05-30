@@ -1,0 +1,2 @@
+@echo off
+powershell (Add-Type '[DllImport("user32.dll")]^public^static^extern^int^SendMessage(int^hWnd,int^hMsg,int^wParam,int^lParam);' -Name User32 -Namespace Win32Functions)^[Win32Functions.User32]::SendMessage(-1,0x112,0xF170,2)
